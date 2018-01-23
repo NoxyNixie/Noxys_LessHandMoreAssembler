@@ -24,7 +24,10 @@ local blacklist = {
 	["transport-belt"] = true,
 	["wood"] = true,
 	["wooden-chest"] = true,
+	-- Angels refining
+	["burner-ore-crusher"] = true,
 }
+
 -- Patch all recipes to be advanced crafting.
 for k,recipe in pairs(data.raw.recipe) do
 	if not blacklist[k] and not string.match(k, "^creative[-]mode[-]") then
