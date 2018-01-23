@@ -26,6 +26,9 @@ local blacklist = {
 	["wooden-chest"] = true,
 	-- Angels refining
 	["burner-ore-crusher"] = true,
+	-- bobs mods
+	["wooden-board"] = true,
+	["basic-circuit-board"] = true,
 }
 
 -- Patch all recipes to be advanced crafting.
@@ -45,4 +48,21 @@ table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_cat
 -- Patch assembling machine 2 so we can actually craft the refinery with it.
 if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5 then
 	data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
+end
+
+-- Patch for bobs to move some of the basics in the electronics catagory to hand crafting
+if data.raw["recipe-category"].electronics then
+	for _,v in pairs{"copper-cable", "wooden-board", "basic-circuit-board"} do
+		if data.raw.recipe[v] then
+			data.raw.recipe[v].category = "crafting"
+		end
+	end
+end
+
+-- Patch for bobs mods adding electroncs crafting to the player.
+local cats = data.raw.player.player.crafting_categories
+for i =#cats, 1, -1 do
+	if cats[i] == "electronics" then
+		table.remove(cats, i)
+	end
 end
