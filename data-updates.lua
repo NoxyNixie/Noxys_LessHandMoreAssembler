@@ -26,9 +26,14 @@ local blacklist = {
 	["wooden-chest"] = true,
 	-- Angels refining
 	["burner-ore-crusher"] = true,
+	["stone-crushed"] = true,
 	-- bobs mods
 	["wooden-board"] = true,
 	["basic-circuit-board"] = true,
+	-- Omnimatter
+	["crushing-omnite-by-hand"] = true,
+	["omnicium-gear-wheel"] = true,
+	["burner-omnitractor-1"] = true,
 }
 
 -- Patch all recipes to be advanced crafting.

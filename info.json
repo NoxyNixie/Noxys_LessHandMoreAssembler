@@ -1,6 +1,6 @@
 {
 	"name": "Noxys_LessHandMoreAssembler",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"factorio_version": "0.16",
 	"title": "Noxys Less Hands More Assemblers",
 	"author": "Noxy",
@@ -22,6 +22,13 @@
 		"? bobwarfare",
 		"? angelsrefining",
 		"? angelspetrochem",
-		"? angelssmelting"
+		"? angelssmelting",
+		"? omnimatter",
+		"? omnimatter-compression",
+		"? omnimatter-crystal",
+		"? omnimatter-fluid",
+		"? omnimatter-science",
+		"? omnimatter-water",
+		"? omnimatter-wood"
 	]
 }
