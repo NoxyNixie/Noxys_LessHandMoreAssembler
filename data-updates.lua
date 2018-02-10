@@ -1,5 +1,6 @@
 -- The items we don't touch so early game is still possible even when starting without items.
 local blacklist = {
+	["science-pack-1"] = true,
 	["assembling-machine-1"] = true,
 	["assembling-machine-2"] = true,
 	["boiler"] = true,
@@ -8,7 +9,7 @@ local blacklist = {
 	["copper-cable"] = true,
 	["electronic-circuit"] = true,
 	["firearm-magazine"] = true,
-	-- ["inserter"] = true, -- As annoying that this is you don't actually need this
+	-- ["inserter"] = true, -- As annoying as this is you don't actually need it
 	["iron-axe"] = true,
 	["iron-gear-wheel"] = true,
 	["iron-stick"] = true,
@@ -39,9 +40,9 @@ local blacklist = {
 -- Patch all recipes to be advanced crafting.
 for k,recipe in pairs(data.raw.recipe) do
 	if not blacklist[k] and not string.match(k, "^creative[-]mode[-]") then
-		if not recipe.category then 
+		if not recipe.category then
 			recipe.category = "advanced-crafting"
-		elseif recipe.category == "crafting" then 
+		elseif recipe.category == "crafting" then
 			recipe.category = "advanced-crafting"
 		end
 	end
@@ -56,6 +57,7 @@ if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5 t
 end
 
 -- Patch for bobs to move some of the basics in the electronics catagory to hand crafting
+-- Todo: Change this so that the things can still be used in the electronics assemblers.
 if data.raw["recipe-category"].electronics then
 	for _,v in pairs{"copper-cable", "wooden-board", "basic-circuit-board"} do
 		if data.raw.recipe[v] then
@@ -64,7 +66,7 @@ if data.raw["recipe-category"].electronics then
 	end
 end
 
--- Patch for bobs mods adding electroncs crafting to the player.
+-- Patch for bobs mods removing electroncs crafting from the player.
 local cats = data.raw.player.player.crafting_categories
 for i =#cats, 1, -1 do
 	if cats[i] == "electronics" then
