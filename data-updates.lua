@@ -37,7 +37,11 @@ local blacklist = {
 	["burner-omnitractor-1"] = true,
 	-- AAI Industry
 	["motor"] = true,
+	["science-pack-0"] = true,
 	-- PyScience
+	["stone-tablet"] = true,
+	["burner-lab"] = true,
+	["burner-assembling-machine"] = true,
 	["tcp-t0"] = true,
 	["sct-t0-cognition-mesh"] = true,
 	["sct-t0-erudition-turbine"] = true,
