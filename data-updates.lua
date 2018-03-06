@@ -35,6 +35,12 @@ local blacklist = {
 	["crushing-omnite-by-hand"] = true,
 	["omnicium-gear-wheel"] = true,
 	["burner-omnitractor-1"] = true,
+	-- AAI Industry
+	["motor"] = true,
+	-- PyScience
+	["tcp-t0"] = true,
+	["sct-t0-cognition-mesh"] = true,
+	["sct-t0-erudition-turbine"] = true,
 }
 
 -- Patch all recipes to be advanced crafting.
