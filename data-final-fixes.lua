@@ -35,6 +35,7 @@ local blacklist = {
 	["crushing-omnite-by-hand"] = true,
 	["omnicium-gear-wheel"] = true,
 	["burner-omnitractor-1"] = true,
+	["burner-omnitractor"] = true,
 	-- AAI Industry
 	["motor"] = true,
 	["science-pack-0"] = true,
