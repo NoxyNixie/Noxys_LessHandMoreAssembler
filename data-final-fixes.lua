@@ -62,11 +62,6 @@ end
 -- Patch assembling machine 1 to be considered an advanced crafter.
 table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "advanced-crafting")
 
--- Patch assembling machine 2 so we can actually craft the refinery with it.
-if data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count < 5 then
-	data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 5
-end
-
 -- Patch for bobs to move some of the basics in the electronics catagory to hand crafting
 -- Todo: Change this so that the things can still be used in the electronics assemblers.
 if data.raw["recipe-category"].electronics then
