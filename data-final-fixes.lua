@@ -30,6 +30,7 @@ local blacklist = {
 	["stone-crushed"] = true,
 	-- bobs mods
 	["wooden-board"] = true,
+	["basic-transport-belt"] = true,
 	["basic-circuit-board"] = true,
 	-- Omnimatter
 	["crushing-omnite-by-hand"] = true,
