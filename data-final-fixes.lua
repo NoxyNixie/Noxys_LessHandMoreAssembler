@@ -1,6 +1,6 @@
 -- The items we don't touch so early game is still possible even when starting without items.
 local blacklist = {
-	["science-pack-1"] = true,
+	["automation-science-pack"] = true,
 	["assembling-machine-1"] = true,
 	["assembling-machine-2"] = true,
 	["boiler"] = true,
