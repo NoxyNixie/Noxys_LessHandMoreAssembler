@@ -47,6 +47,13 @@ local blacklist = {
 	["tcp-t0"] = true,
 	["sct-t0-cognition-mesh"] = true,
 	["sct-t0-erudition-turbine"] = true,
+	-- Amator mods
+	["apm_gearing"] = true,
+	["apm_steam_clock"] = true,
+	["apm_wood_board_1"] = true,
+	["apm_assembling_machine_0"] = true,
+	["apm_industrial_science_pack"] = true,
+	["apm_lab_0"] = true,
 }
 
 -- Patch all recipes to be advanced crafting.
@@ -79,4 +86,9 @@ for i =#cats, 1, -1 do
 	if cats[i] == "electronics" then
 		table.remove(cats, i)
 	end
+end
+
+-- Patch Amators science pack recipe catagory.
+if data.raw.recipe["apm_industrial_science_pack"] then
+	data.raw.recipe["apm_industrial_science_pack"].category = "crafting"
 end
