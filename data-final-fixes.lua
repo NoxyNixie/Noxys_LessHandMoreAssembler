@@ -81,7 +81,7 @@ if data.raw["recipe-category"].electronics then
 end
 
 -- Patch for bobs mods removing electroncs crafting from the player.
-local cats = data.raw.player.player.crafting_categories
+local cats = data.raw.character.character.crafting_categories
 for i =#cats, 1, -1 do
 	if cats[i] == "electronics" then
 		table.remove(cats, i)
