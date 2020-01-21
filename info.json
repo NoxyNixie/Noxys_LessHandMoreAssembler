@@ -1,14 +1,14 @@
 {
 	"name": "Noxys_LessHandMoreAssembler",
-	"version": "0.1.5",
-	"factorio_version": "0.17",
+	"version": "0.2.0",
+	"factorio_version": "0.18",
 	"title": "Noxys Less Hands More Assemblers",
 	"author": "Noxy",
 	"contact": "not.a.valid.email.address@example.com",
 	"homepage": "https://mods.factorio.com/user/_noxy_",
 	"description": "Our hands have become sore, we must not handcraft anymore. This mod changes recipes to require an assembling machine but it tries to not interfere with the early game too much.",
 	"dependencies": [
-		"base >= 0.17.35",
+		"base >= 0.18.0",
 		"? bobores",
 		"? bobplates",
 		"? bobelectronics",
