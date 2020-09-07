@@ -56,7 +56,6 @@ local blacklist = {
 	["apm_lab_0"] = true,
   -- Krastorio 2
 	["automation-core"] = true,
-
 }
 
 -- Patch all recipes to be advanced crafting.
@@ -85,7 +84,7 @@ end
 
 -- Patch for bobs mods removing electroncs crafting from the player.
 local cats = data.raw.character.character.crafting_categories
-for i =#cats, 1, -1 do
+for i = #cats, 1, -1 do
 	if cats[i] == "electronics" then
 		table.remove(cats, i)
 	end
