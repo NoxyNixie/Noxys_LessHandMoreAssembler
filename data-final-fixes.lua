@@ -56,6 +56,8 @@ local blacklist = {
 	["apm_lab_0"] = true,
 	-- Krastorio 2
 	["automation-core"] = true,
+	-- BZ Aluminum
+	["aluminum-cable"] = true,
 }
 
 -- Patch all recipes to be advanced crafting.
